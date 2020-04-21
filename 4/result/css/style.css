@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer, nav, aside, section, div {
+    display: block;
+}
+
+body {
+    background-color: #E8C59C;
+}
+
+header {
+    height: 130px;
+    /*background-color: greenyellow;  !* TEMP *!*/
+    padding-top: 1px;
+}
+
+#logo {
+    display: block;
+    background: url("../images/big-bang-theory-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 118px;
+    width: 306px;
+    margin-top: 6px;
+    margin-left: 8px;
+}
+
+#wrapper {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+section#content {
+    background: url("../images/big-bang-theory-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    padding-top: 1px;
+    margin-bottom: 70px;
+    border-radius: 5px;
+}
+
+aside {
+    height: 607px;
+    width: 377px;
+    /*background-color: palevioletred; !* #E8C59C; *!*/
+    opacity: 0.5;
+    /*float: left;*/
+}
+
+main {
+    height: 615px;
+    width: 616px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /*background-color: teal; !* Transparent *!*/
+    /*float: right;*/
+}
+
+footer {
+    height: 69px;
+    width: 1384px;
+    background-color: black; /* #E8C59C; */
+    opacity: 0.5;
+}
+
+/* Inside main */
+
+main > section {
+    background-color: #E8C59C;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+}
+
+main > section > img {
+    height: 87px;
+    width: 130px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+main > section > p {
+    color: #ffffff;
+    /*font-family: arial;*/
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.play-button {
+    background: url("../images/movie-player-button.png");
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    margin-top: 36px;
+    margin-left: 56px;
+}
+
+/*-------------------- Added -------------------------*/
+
+section#aside-and-boxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside, footer {
+    margin: 8px 0 0 8px;
+}
+
+main section {
+    margin: 8px 8px 0 0;
+}
+
+/*.clear {
+    clear: both;
+}*/
+
+/* MOBILE */
+
+@media (max-width: 1420px) {
+    body {
+        background-color: #000000;
+    }
+
+    aside, footer {
+        display: none;
+    }
+
+    #wrapper, main {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    section#content {
+        background: none;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    #logo {
+        height: 67px;
+        width: 175px;
+        margin: 17px auto 0;
+    }
+}
+
+/* TABLET */
+@media (min-width: 800px) and (max-width: 1420px) {
+    #wrapper, main, main > section {
+        width: 600px;
+    }
+
+}
