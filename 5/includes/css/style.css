@@ -1,0 +1,18 @@
+/* part 0: */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid black; */
+}
+
+header, footer, aside, section, main, article {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+    background: bisque;
+}
