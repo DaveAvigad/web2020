@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 1</title>
+    <style>
+        .class {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+<p id="p1">hello world 🤩</p>
+<button id="button1">button 1</button>
+<button id="button2">button 2</button>
+
+<script>
+  var p = document.getElementById('p1');
+  var button1 = document.getElementById('button1');
+  var button2 = document.getElementById('button2');
+    debugger;
+  button1.onclick = function () {
+    p.style.opacity = 0; // also visibility = 'hidden'
+  }
+  button2.onclick = function () {
+    p.style.opacity = 1; // also visibility = 'display'
+  }
+</script>
+</body>
+</html>

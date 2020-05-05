@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 6</title>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="p1">hello world 🤩</p>
+<button id="button1">+</button>
+<button id="button2">-</button>
+
+<script>
+  var p = document.getElementById('p1');
+  var button1 = document.getElementById('button1');
+  var button2 = document.getElementById('button2');
+  var textSize;
+
+  button1.onclick = function () {
+    textSize = window.getComputedStyle(p).getPropertyValue('font-size');
+    p.style.fontSize = (parseInt(textSize) + 10) + 'px';
+  }
+  button2.onclick = function () {
+    textSize = window.getComputedStyle(p).getPropertyValue('font-size');
+    p.style.fontSize = (parseInt(textSize) - 10) + 'px';
+  }
+</script>
+</body>
+</html>

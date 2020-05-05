@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 4</title>
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<p id="p1"></p>
+
+<img alt="Peter_Griffin1"
+     src="https://images.firstwefeast.com/complex/image/upload/c_limit,f_auto,fl_lossy,q_auto,w_768/znxap3tswfzvskauvxzt">
+<img alt="Peter_Griffin2"
+     src="https://vignette.wikia.nocookie.net/great-characters/images/9/95/Peterbirdistheword.jpeg/revision/latest?cb=20181216010431">
+<img alt="Peter_Griffin3"
+     src="https://vignette.wikia.nocookie.net/familyguy/images/5/5d/FGuy_Peter_Gen2012_R3Flat.jpg/revision/latest/top-crop/width/720/height/900?cb=20190415212304">
+
+<script>
+
+  window.onload = function () {
+    var p = document.getElementById('p1');
+    var images = document.getElementsByTagName('img');
+    
+    p.innerText = 'number of images on this doc: ' + images.length;
+  }
+
+</script>
+</body>
+</html>

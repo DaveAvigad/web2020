@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 3</title>
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+        }
+        
+        .blue-bg {
+            background: blue;
+        }
+        
+        .green-bg {
+            background: green;
+        }
+        
+        .yellow-bg {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tbody>
+    <tr>
+        <td class="blue-bg"></td>
+        <td class="green-bg"></td>
+        <td class="yellow-bg"></td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+  var blueTd = document.getElementsByClassName('blue-bg')[0];
+  var greenTd = document.getElementsByClassName('green-bg')[0];
+  var yellowTd = document.getElementsByClassName('yellow-bg')[0];
+
+  blueTd.onmouseover = function () { document.body.style.backgroundColor = 'blue'; }
+  greenTd.onmouseover = function () { document.body.style.backgroundColor = 'green'; }
+  yellowTd.onmouseover = function () { document.body.style.backgroundColor = 'yellow'; }
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 2</title>
+</head>
+<body>
+
+<p id="p1">hello world 🤩</p>
+<button id="button1">button 1</button>
+
+<script>
+  var p = document.getElementById('p1');
+  var button1 = document.getElementById('button1');
+  var toggle = -1;
+
+  button1.onclick = function () {
+    toggle *= -1;
+    if (toggle > 0)
+      return p.style.opacity = 0; // also visibility = 'hidden'
+    
+    return p.style.opacity = 1;
+  }
+</script>
+</body>
+</html>

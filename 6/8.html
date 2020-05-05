@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra js 8</title>
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Fruits list: </h1>
+<ul id="list"></ul>
+<script>
+    var fruits = ['Banana 🍌', 'Apple 🍎', 'Orange 🍊', 'Mango 🥭'];
+    var list = document.getElementById('list');
+    
+    for (var fruit of fruits) {
+      var node = document.createElement('LI');
+      node.innerText = fruit
+      list.appendChild(node)
+    }
+</script>
+</body>
+</html>
