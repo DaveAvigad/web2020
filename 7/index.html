@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="includes/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DavidAvigad</a>
+        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button"></button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <form action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET">
+                    <!--  pattern="[A-Z]" -->
+                    <label>1. FullName &nbsp;
+                        <input name="fullName" required type="text">
+                    </label>
+                    <label>2. Password
+                        <input name="pass" type="password">
+                    </label>
+                    <label>3. Email
+                        <input autocomplete name="mail" type="email">
+                    </label>
+                    <label>4. Website
+                        <input name="website" type="url">
+                    </label>
+                    <label>5. Phone
+                        <input name="phone" type="tel">
+                    </label>
+                    <label>6. Coffee
+                        <input name="coffee" type="number">
+                    </label>
+                    <label>7. Range
+                        <input max="100" min="50" name="temper" type="range">
+                    </label>
+                    <label>8. Address
+                        <textarea cols="20" name="address" rows="5">some text</textarea>
+                    </label>
+                    <fieldset>
+                        <legend>10. Hobbies:</legend>
+                        <label>GYM:
+                            <input name="interests[]" type="checkbox" value="GYM">
+                        </label>
+                        <br>
+                        <label>Play RedAlert:
+                            <input name="interests[]" type="checkbox" value="Play RedAlert">
+                        </label>
+                        <br>
+                        <label>Coding-tutorials:
+                            <input name="interests[]" type="checkbox" value="Coding-tutorials">
+                        </label>
+                    </fieldset>
+                    
+                    <label>11. Gender
+                        <input checked name="gender" type="radio" value="male"> Male
+                        <br>
+                        <input name="gender" type="radio" value="female"> Female
+                        <br>
+                        <input name="gender" type="radio" value="other"> Other
+                    </label>
+                    <label>12. Age
+                        <select name="age">
+                            <option selected="selected">Choose...</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                        </select>
+                    </label>
+                    <label>color:
+                        <input id="changeColor" type="color">
+                    </label>
+                    <input type="submit" value="submit">
+                
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="includes/js/jquery-3.2.1.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="includes/js/main.js"></script>
+</body>
+
+</html>

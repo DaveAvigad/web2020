@@ -1,0 +1,9 @@
+label {
+    display: block;
+}
+.error {
+    color: darkred;
+}
+.highlight {
+    background-color: aquamarine;
+}
