@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Projects</title>
+</head>
+<body>
+<h1>David Avigad - Portfolio</h1>
+{% for project in projects %}
+<section id="{{project.id}}">
+    <img alt="{{project.title}}" src="{{project.avatar.url}}" title="{{project.title}}">
+    <h2>{{project.title}}</h2>
+    <p>{{project.description}}</p>
+    {% if project.url %}
+    <a href="{{project.url}}" target="_blank">click here for video about {{project.title}}</a>
+    {% endif %}
+</section>
+{% endfor %}
+</body>
+</html>
