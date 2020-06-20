@@ -11,11 +11,11 @@
 {% if user.is_authenticated %}
 
 
-    {% for _user in users %}
-        <h1>{{ _user.username }}'s todos:</h1>
+    {% for u in users %}
+        <h1>{{ u.username }}'s todos:</h1>
         <ol>
             {% for t in alltodos %}
-                {% if t.user_id_id == _user.id %}
+                {% if t.user_id_id == u.id %}
                     <li>
                         {% if t.user_id_id == user.id %}
                             <a href="/todo/{{ t.id }}">✏️ Edit</a> |
