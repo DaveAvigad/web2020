@@ -1,0 +1,15 @@
+li a{
+    text-decoration: none;
+}
+
+li a:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 10px;
+}
+a button {
+    display: none;
+}

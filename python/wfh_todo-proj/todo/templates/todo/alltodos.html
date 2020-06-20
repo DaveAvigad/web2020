@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Register Form</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+
+
+    {% for _user in users %}
+        <h1>{{ _user.username }}'s todos:</h1>
+        <ol>
+            {% for t in alltodos %}
+                {% if t.user_id_id == _user.id %}
+                    <li>
+                        {% if t.user_id_id == user.id %}
+                            <a href="/todo/{{ t.id }}">✏️ Edit</a> |
+                        {% else %}
+                            <a class='assign' href="/assigntome/{{ t.id }}">🖇 assign to me</a> |
+                        {% endif %}
+                        {% if t.isImportant %} <b> {% endif %}
+                        {{ t.dateCreated }} {{ t.title }}
+                        {% if t.isImportant %} </b> {% endif %}
+                        {% if t.description %} : {{ t.description }}{% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    {% endfor %}
+
+
+    <span>📋</span><a href="/mytodos">Back to My Todos</a>
+    <br><br>
+    <form action="{% url 'logoutuser' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+{% else %}
+    <a href="#">login</a>
+    <a href="register">register</a>
+{% endif %}
+</body>
+</html>

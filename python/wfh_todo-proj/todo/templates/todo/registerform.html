@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register Form</title>
+</head>
+<body>
+<form action="#" method="POST">
+    <h3>{{errMsg}}</h3>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">register</button>
+</form>
+</body>
+</html>

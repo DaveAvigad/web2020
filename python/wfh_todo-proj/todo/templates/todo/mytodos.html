@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Register Form</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h1>{{ user.username }}'s todos:</h1>
+    <br><br>
+    <section>list all todos here</section>
+    <ol>
+        {% for t in allmytodos %}
+            <li>
+                <a href="/todo/{{ t.id }}">
+                    {% if t.isImportant %} <b> {% endif %}
+                    {{ t.dateCreated }} {{ t.title }}
+                    {% if t.isImportant %} </b> {% endif %}
+                    {% if t.description %} : {{ t.description }}{% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ol>
+
+    <span>➕</span> <a href="/createnewtodo">Create New Task</a> |
+    <span>📋</span> <a href="/alltodos">See Others Tasks</a>
+    <br><br>
+    <form action="{% url 'logoutuser' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+
+{% else %}
+    <a href="#">login</a>
+    <a href="register">register</a>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Todo</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+    <h1>Update Todo {{ todo.title }}</h1>
+    <br><br>
+    <h3>{{ errMsg }}</h3>
+
+    <form action="#" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">UPDATE TODO</button>
+    </form>
+
+    <form action="{% url 'donetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Task completed</button>
+    </form>
+
+    <form action="{% url 'deletetodo' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Delete Task</button>
+    </form>
+
+    <form action="{% url 'logoutuser' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">logout</button>
+    </form>
+{% else %}
+    <a href="#">login</a>
+    <a href="register">register</a>
+{% endif %}
+</body>
+</html>
