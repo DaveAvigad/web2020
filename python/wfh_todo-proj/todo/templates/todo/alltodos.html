@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Register Form</title>
+    <title>All Users Todos</title>
 </head>
 <body>
 {% if user.is_authenticated %}
-
-
     {% for u in users %}
         <h1>{{ u.username }}'s todos:</h1>
         <ol>
@@ -31,8 +29,6 @@
             {% endfor %}
         </ol>
     {% endfor %}
-
-
     <span>📋</span><a href="/mytodos">Back to My Todos</a>
     <br><br>
     <form action="{% url 'logoutuser' %}" method="post">

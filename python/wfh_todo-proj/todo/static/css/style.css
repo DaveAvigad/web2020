@@ -4,7 +4,6 @@ li a{
 
 li a:hover {
     color: cornflowerblue;
-    cursor: pointer;
 }
 
 button {

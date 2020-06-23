@@ -8,7 +8,7 @@ from django.utils import timezone
 from .forms import TodoForm
 from .models import Todo
 
-
+# Send an Ajax request with csrf_token go to https://docs.djangoproject.com/en/3.0/ref/csrf/
 # Create your views here.
 
 def registerform(request):
@@ -64,7 +64,7 @@ def mytodos(request):
     # orderby('-dateCreated')
     return render(request, 'todo/mytodos.html', {'allmytodos': todos})
 
-
+@login_required()
 def createnewtodo(request):
     if request.method == 'GET':
         return render(request, 'todo/createnewtodo.html', {'form': TodoForm()})

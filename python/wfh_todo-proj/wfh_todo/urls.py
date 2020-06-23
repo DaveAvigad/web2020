@@ -33,7 +33,6 @@ urlpatterns = [
     path('todo/<int:todo_pk>/delete', views.deletetodo, name='deletetodo'),
 
     path('alltodos/', views.alltodos, name='alltodos'),
-
     path('assigntome/<int:todo_pk>', views.assigntome, name='assigntome'),
 
 ]
